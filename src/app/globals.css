@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+	color: #424243;
+}
+
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-header-blue-500 leading-tight;
+	}
+	h1 {
+		@apply tracking-tighter text-[10svw] w-full font-medium sm:text-[8svw] sm:w-[650px] md:text-[6svw] md:w-[650px] lg:text-6xl lg:w-[800px];
+	}
+	h2 {
+		@apply text-[8svw] sm:text-[6svw] sm:w-[650px] md:text-[4svw] md:w-[650px] lg:text-4xl lg:w-[800px];
+	}
+	h3 {
+		@apply text-[5svw] sm:text-[4svw] md:text-[3svw] lg:text-2xl;
+	}
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+	.inner-hex-clip {
+		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+	}
+}
+
+.video-radial {
+	background-image: radial-gradient(
+		at 50% 0,
+		#e2ebf5 0%,
+		#dae5f1 25%,
+		#c1d3e7 50%,
+		#b0c7e1 60%
+	);
+}
+
+.video-linear-grd {
+	background-image: linear-gradient(
+		to bottom,
+		#bfd1e5 20%,
+		#b6cbe2 40%,
+		#a7c1dd 60%,
+		#90acd1 90%
+	);
+}
+
+.page-gradient {
+	background-image: linear-gradient(
+		to top,
+		#d5e7ff 25%,
+		rgba(255, 255, 255) 100%
+	);
+}
+
+.page-gradient__flipped {
+	background-image: linear-gradient(
+		to bottom,
+		#d5e7ff 25%,
+		rgba(255, 255, 255) 100%
+	);
+}
+
+.video-shadow {
+	box-shadow: 0px 20px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.page-width {
+	max-width: 1920px;
+}
