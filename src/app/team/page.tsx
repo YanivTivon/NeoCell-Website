@@ -36,7 +36,7 @@ const Team = () => {
 					</Paragraph>
 				</TeamMember>
 				<TeamMember
-					image="/GilbertHeadshot.png"
+					image="/GilbertHeadshot.jpg"
 					role="Co-Founder"
 					name="Gilbert Brook"
 					linkedInUrl="https://www.linkedin.com/in/gilbert-brook-a11353169/"
