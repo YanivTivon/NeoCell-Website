@@ -2,11 +2,15 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import React from "react";
+
+import { Paragraph } from "../Paragraph";
 
 interface TeamMemberProps {
 	image: string;
 	role: string;
 	name: string;
+	children: React.ReactNode;
 	linkedInUrl: string;
 }
 
@@ -15,16 +19,14 @@ export const TeamMember = ({
 	role,
 	name,
 	linkedInUrl,
+	children,
 }: TeamMemberProps) => {
 	return (
 		<div className="flex flex-col-reverse items-center lg:flex-row-reverse">
-			<div className="text-lg max-w-96 p-8 h-full lg:-translate-x-2 rounded-r shadow-md border-white/40 bg-gradient-to-b from-white/60 to-white/40">
-				Bio - Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cum
-				impedit doloremque unde nihil explicabo maxime, magni quaerat accusamus
-				minus aliquid incidunt ex nesciunt soluta, corrupti nobis ut molestias
-				reiciendis!
+			<div className="flex flex-col gap-4 max-w-[400px] -translate-y-2 lg:max-w-xl p-8 h-full lg:-translate-x-2 lg:translate-y-0 rounded-b lg:rounded-r shadow-md border-white/40 bg-gradient-to-b from-white/60 to-white/40">
+				{children}
 			</div>
-			<div className="relative h-full w-full max-w-[400px] flex flex-col place-self-center border border-white/40 bg-gradient-to-b from-white/40 to-white/20 backdrop-blur-sm px-6 py-12 shadow-xl rounded-lg">
+			<div className="relative h-full w-full max-w-[400px] flex flex-col place-self-center border border-white/40 bg-gradient-to-b from-white/40 to-white/20 backdrop-blur-sm px-6 py-12 shadow-lg rounded-t lg:rounded-l">
 				<div className="flex-1 w-full h-full flex justify-center">
 					<img
 						src={image}
