@@ -1,7 +1,8 @@
 import cn from "@/utilities/cn";
+import React from "react";
 
 interface ParagraphProps {
-	children: string;
+	children: React.ReactNode;
 	size?: SizeKey;
 	justify?: boolean;
 }
